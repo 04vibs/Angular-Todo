@@ -1,0 +1,11 @@
+  <div class="container">
+    <app-todo-add (update)="addTodo($event)"></app-todo-add>
+    <ul class="list-group">
+      <li *ngFor="let todo of todoList" class="list-group-item">
+        {{todo.task}}
+        <button class="btn btn-primary" (click)="onSelectedTodo(todo)">UPDATE</button>
+      </li>
+    </ul> 
+    <app-todo-update [todo]="selectedTodo"></app-todo-update>
+    <app-list-copy [list]="todoList"></app-list-copy>  
+  </div>

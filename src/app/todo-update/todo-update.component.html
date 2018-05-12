@@ -1,0 +1,5 @@
+<div *ngIf="todo">
+   <h2>SELECTED TODO</h2>
+   <input type="text" placeholder="todo...." [(ngModel)]="todo.task">
+  <button class="delete" (click)="ondelete">Delete</button> 
+  </div>
